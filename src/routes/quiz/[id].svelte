@@ -5,7 +5,7 @@
 		if (res.ok) {
 			return {
 				props: {
-					questions: questions.findResult
+					questions: questions.output
 				}
 			};
 		}
@@ -18,6 +18,9 @@
 	export const email = $page.url.pathname;
 
 	function shuffle(array) {
+		if (array === undefined) {
+			return [];
+		}
 		let currentIndex = array.length,
 			randomIndex;
 

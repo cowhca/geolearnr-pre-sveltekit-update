@@ -1,6 +1,6 @@
 <script context="module">
 	export async function load({ fetch }) {
-		const res = await fetch('/quiz?num=3');
+		const res = await fetch('/quiz');
 		const questions = await res.json();
 		if (res.ok) {
 			return {
