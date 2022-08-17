@@ -2,8 +2,9 @@ import adapter from '@sveltejs/adapter-netlify';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	serverhost: true,
 	kit: {
-		adapter: adapter()
+		adapter: adapter({ out: 'build' })
 	}
 };
 
