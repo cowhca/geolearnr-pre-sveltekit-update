@@ -7,12 +7,9 @@ export async function GET({ url }) {
 
 	const urlName = url.searchParams.get('name');
 	const urlNum = url.searchParams.get('num');
-	console.log(urlName, urlNum);
-	// const questions = await collection.find({}).toArray();
 	let output = [];
 
 	if (urlName === null && urlNum === null) {
-		// output = questions;
 		output = await collection.find({}).toArray();
 	} else if (urlName === null && urlNum !== null) {
 		output = await collection.find({}).toArray();
